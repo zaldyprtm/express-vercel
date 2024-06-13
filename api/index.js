@@ -1,13 +1,8 @@
 
 const express = require("express");
 const app = express();
-app.get("/api", (req, res) => {
-  res.send(
-    res.send({
-      msg: "hello world`",
-      name: "vercel-app"
-    })
-  );
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Hello from Express!' });
 });
 app.listen(8080, () => {
   console.log("Server started at http://localhost:8080");
